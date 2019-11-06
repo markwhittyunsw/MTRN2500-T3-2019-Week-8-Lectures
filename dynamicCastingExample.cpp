@@ -15,13 +15,14 @@ class Shape {
         friend std::ostream& operator<<(std::ostream& os, const Shape& s);
         
 };
-/*class Square: Shape {
+class Square: public Shape {
     private:
         int side_length;
     public:
+        Square(int x_, int y_, int side_length_):Shape(x_, y_) {side_length = side_length_;}
         int getSideLength() { return side_length; }
-        void setSideLength(int l) = { side_length = l;}
-}*/
+        void setSideLength(int l) { side_length = l;}
+};  
 class Circle: public Shape {
     private:
         int radius;
@@ -43,16 +44,21 @@ int main() {
     }
     Circle *c = new Circle(10, 11, 12);
     ShapePtrs.push_back(c);
-    
+    Square *sq = new Square(100, 120, 200);
+    ShapePtrs.push_back(sq);
+
     for (std::vector<Shape*>::iterator it = ShapePtrs.begin(); it != ShapePtrs.end(); it++) {
 		// (*it) will be of type Shape *
+        // Hence we try and cast it to a Circle, if it is, then we handle it differently from a regular Shape or Square
 		Circle * possible_circle = dynamic_cast<Circle*>(*it);
 		if (possible_circle != nullptr) {
-			possible_circle->setRadius(possible_circle->getRadius() + 5);
+			std::cout << "Found item of type Circle" << std::endl;
+            possible_circle->setRadius(possible_circle->getRadius() + 5);
 			possible_circle->setX(possible_circle->getX() + 4);
 			possible_circle->setY(possible_circle->getY() + 1);
 			std::cout << (**it) << " radius: " << possible_circle->getRadius() << std::endl;
 		} else {
+            std::cout << "Found item of type Shape or Square" << std::endl;
 			std::cout << (**it) << std::endl;
 		}
 	}

@@ -5,7 +5,8 @@ using namespace std;
 class Test {};
 
 int main () {
-  int * a,b;
+  int * a;
+  int b;
   Test T;
   a=0; b=0;
   if (typeid(a) != typeid(b))

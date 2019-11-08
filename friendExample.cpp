@@ -1,4 +1,4 @@
-// friend class 
+// friend class example from http://www.cplusplus.com/doc/tutorial/inheritance/
 #include <iostream>
 using namespace std;
 

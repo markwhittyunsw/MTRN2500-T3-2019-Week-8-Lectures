@@ -19,6 +19,6 @@ int main () {
     std::cout << "T is: " << typeid(T).name() << std::endl;
   }
   assert(typeid(a) == typeid(b));  // Ignored if NDEBUG is defined.
-
+  
   return 0;
 }

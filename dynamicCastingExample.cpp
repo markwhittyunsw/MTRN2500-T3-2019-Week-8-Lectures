@@ -50,7 +50,7 @@ int main() {
     for (std::vector<Shape*>::iterator it = ShapePtrs.begin(); it != ShapePtrs.end(); it++) {
 		// (*it) will be of type Shape *
         // Hence we try and cast it to a Circle, if it is, then we handle it differently from a regular Shape or Square
-		Circle * possible_circle = dynamic_cast<Circle*>(*it);
+		Circle * possible_circle = dynamic_cast<Circle *>(*it);
 		if (possible_circle != nullptr) {
 			std::cout << "Found item of type Circle" << std::endl;
             possible_circle->setRadius(possible_circle->getRadius() + 5);

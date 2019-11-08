@@ -22,6 +22,14 @@ int main ()
   std::cout << "foo contains: ";
   std::cout << std::get<0>(foo) << ' ';
   std::cout << std::get<1>(foo) << '\n';
+  std::cout << "bar contains: ";
+  for(int i = 0; i < 4; i++) {
+    std::cout << std::get<i>(bar) << ' ';
+  }
+  std::cout << std::endl
+   // std::cout << std::get<1>(bar) << ' ';
+  //  std::cout << std::get<2>(bar) << ' ';
+  //  std::cout << std::get<3>(bar) << std::endl;
 
   return 0;
 }

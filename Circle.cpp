@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Circle.h"
-#include "Point.h"
+#include "Circle.hpp"
+#include "Point.hpp"
 
 using namespace std;
 

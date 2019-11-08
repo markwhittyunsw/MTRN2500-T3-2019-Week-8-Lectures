@@ -17,10 +17,14 @@ int main()
 	dude.SetName("Mark Whitty");
 	cout << dude.GetName() << endl;
 
+	std::cin.get();
+	
 	CEO theBoss;
 
 	cout << " I am a CEO "  << endl;
 	theBoss.Eat();
+
+	std::cin.get();
 
 	cout << theBoss.GetName() << endl;
 
@@ -29,18 +33,22 @@ int main()
 
 	cout << theBoss.GetName() << endl;
 
+	std::cin.get();
+
 	Batman superMark;
 	cout << "superMark's name is " << superMark.GetName() << " ... lol" << endl;
 	superMark.SetName("Steve Jobs");
 	cout << "superMark's name is now " << superMark.GetName() << endl;
 
+	std::cin.get();
+	
 	GarbageMan jim;
 
 	cout << "jim the garbage man is named: " << jim.GetName() << endl;
 	jim.SetName("jimbo");
 	cout << "jim the garbage man is now named: " << jim.GetName() << endl;
 
-
+	std::cin.get();
 
 	return 0;
 }

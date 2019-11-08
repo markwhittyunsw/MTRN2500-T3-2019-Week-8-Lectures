@@ -21,8 +21,6 @@ int main()
 	Circle C3();
 	cout << "Circle C3 parameters [x, y, r] are [" << C3.GetX() << ", " << C3.GetY() << ", " << C3.GetRadius() << "]" << endl;
 
-	
-	_getch();
 	return 0;
 
 }

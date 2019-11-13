@@ -8,4 +8,6 @@ class GarbageMan : public Person
 	double garbageEfficiency;
 public:
 	GarbageMan();
+	void Eat();
+	virtual void Sneeze();
 };

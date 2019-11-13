@@ -34,3 +34,8 @@ void Person::Live()
 {
 	cout << "zzzz" << endl;
 }
+
+void Person::Sneeze()
+{
+	cout << "bless you" << endl;
+}

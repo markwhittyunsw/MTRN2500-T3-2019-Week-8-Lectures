@@ -17,6 +17,8 @@ public:
 
 	void	SetName(string s);
 
-	void	Eat();
+	virtual void	Eat();
 	void	Live();
+	void 	Sneeze();
+
 };

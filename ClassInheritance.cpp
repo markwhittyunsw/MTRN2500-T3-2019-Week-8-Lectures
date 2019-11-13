@@ -1,7 +1,6 @@
 // ClassInheritance.cpp : Defines the entry point for the console application.
 //
 
-//#include "stdafx.h"
 #include "Person.hpp"
 #include "CEO.hpp"
 #include "Batman.hpp"
@@ -43,6 +42,7 @@ int main()
 	std::cin.get();
 	
 	GarbageMan jim;
+	jim.Eat();
 
 	cout << "jim the garbage man is named: " << jim.GetName() << endl;
 	jim.SetName("jimbo");
@@ -50,5 +50,11 @@ int main()
 
 	std::cin.get();
 
+	Person *p = &jim;
+	p->Eat();
+	GarbageMan *g = dynamic_cast<GarbageMan*>(&jim);
+	g->Sneeze();
+	g = &jim;
+	g->Sneeze();
 	return 0;
 }
